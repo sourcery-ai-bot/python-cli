@@ -6,11 +6,11 @@ def cli():
 
 @cli.command()
 @click.option('-p', '--punc', default="!", help="Set the punctuation at the end")
-@click.option('-u', '--upper', default=False, \
+@click.option('-u', '--upper', default=False,
                 is_flag=True, help="Change the message to all uppercase")
-@click.option('-l', '--lower', default=False, \
+@click.option('-l', '--lower', default=False,
                 is_flag=True, help="Change the message to all lowercase")
-@click.option('-w', '--word', required=False, default="Hello", \
+@click.option('-w', '--word', required=False, default="Hello",
                 help="Set the greeting word, e.g.: Hi")
 @click.argument('name', required=False, default="World")
 def greet(punc, name, upper, lower, word):
